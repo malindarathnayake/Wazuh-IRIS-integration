@@ -12,8 +12,11 @@ Simple Wazuh integration to send alerts to IRIS, as described in [https://nateur
 git clone https://github.com/nateuribe/Wazuh-IRIS-integration.git
 cd Wazuh-IRIS-integration/
 cp custom-iris.py /var/ossec/integrations/custom-iris.py
+cp custom-iris /var/ossec/integrations/custom-iris
 chmod 750 /var/ossec/integrations/custom-iris.py
 chown root:wazuh /var/ossec/integrations/custom-iris.py
+chmod 750 /var/ossec/integrations/custom-iris
+chown root:wazuh /var/ossec/integrations/custom-iris
 ```
 Add the following snippet into the `/var/ossec/etc/ossec.conf` config file:
 ```xml
@@ -21,7 +24,7 @@ Add the following snippet into the `/var/ossec/etc/ossec.conf` config file:
 
 <!-- IRIS integration -->
 <integration>
-  <name>custom-iris.py</name>
+  <name>custom-iris</name>
   <hook_url>http://IRIS-BASE-URL/alerts/add</hook_url>
   <level>7</level>
   <api_key>APIKEY</api_key>
