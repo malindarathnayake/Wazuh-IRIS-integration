@@ -1,5 +1,9 @@
 # Wazuh-IRIS-integration
-Simple Wazuh integration to send alerts to IRIS, as described in [https://nateuribe.tech/blog/foss-soc/](https://nateuribe.tech/blog/foss-soc/).
+Simple Wazuh integration to send alerts to IRIS, Forked from https://nateuribe.tech
+
+## Changes---------------
+
+Added the custom-iris shell script insted of calling the .py file which is not supported now 
 
 ## Requirements
 - [Wazuh](https://github.com/wazuh/wazuh) Server
@@ -9,7 +13,7 @@ Simple Wazuh integration to send alerts to IRIS, as described in [https://nateur
 
 ## Installation
 ```
-git clone https://github.com/nateuribe/Wazuh-IRIS-integration.git
+git clone https://github.com/malindarathnayake/Wazuh-IRIS-integration.git
 cd Wazuh-IRIS-integration/
 cp custom-iris.py /var/ossec/integrations/custom-iris.py
 cp custom-iris /var/ossec/integrations/custom-iris
